@@ -5,13 +5,15 @@
       <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
         <div class="lg:w-1/2 px-6">
           <h2 class="font-semibold text-gray-900 text-xs">ADDRESS</h2>
-          <p class="mt-1 text-gray-500 text-md">Unit 23, Leafield Industrial Estate, Corsham, Wiltshire, SN13 9RS</p>
+          <p class="mt-1 text-gray-500 text-md"><?php the_field('address', 121); ?></p>
         </div>
         <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
           <h2 class="font-semibold text-gray-900 text-xs">EMAIL</h2>
-          <a class="text-red-500 font-semibold" href="mailto:mrdavidround@gmail.com?subject=Corsham%20Office%20Rental%20Enquiry">mrdavidround@gmail.com</a>
+          <a class="text-red-500 font-semibold" href="mailto:<?php the_field('email', 121); ?>?subject=Corsham%20Office%20Rental%20Enquiry">
+            <?php the_field('email', 121); ?>
+          </a>
           <h2 class="font-semibold text-gray-900 text-xs mt-4">PHONE</h2>
-          <a class="text-red-500 font-semibold" href="tel:01225694492">01225 694492‬</a>
+          <a class="text-red-500 font-semibold" href="tel:<?php the_field('phone', 121); ?>"><?php the_field('phone', 121); ?>‬</a>
         </div>
       </div>
     </div>

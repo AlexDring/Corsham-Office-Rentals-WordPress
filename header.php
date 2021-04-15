@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php the_title(); ?></title>
 
     <?php wp_head(); ?>
 </head>
@@ -79,15 +78,35 @@
     <div class="hidden" id="mobile-menu">
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a href="/" class="bg-red-900 text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+        <a href="/"
+          <?php if( is_front_page()) : ?> class="bg-red-900 text-white block px-3 py-2 rounded-md text-base font-medium" 
+          <?php else : ?> class="text-white hover:bg-red-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          <?php endif; ?>
+        >Home</a>
 
-        <a href="/offices" class="text-white hover:bg-red-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Offices</a>
+        <a href="/offices" 
+        <?php if( is_page( 123 )) : ?> class="bg-red-900 text-white block px-3 py-2 rounded-md text-base font-medium" 
+        <?php else : ?> class="text-white hover:bg-red-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+        <?php endif; ?>
+        >Offices</a>
 
-        <a href="/studios" class="text-white hover:bg-red-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Studios</a>
+        <a href="/studios"
+        <?php if( is_page( 149 )) : ?> class="bg-red-900 text-white block px-3 py-2 rounded-md text-base font-medium" 
+        <?php else : ?> class="text-white hover:bg-red-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+        <?php endif; ?>
+        >Studios</a>
 
-        <a href="/treatment-rooms" class="text-white hover:bg-red-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Treatment Rooms</a>
+        <a href="/treatment-rooms"
+        <?php if( is_page( 154 )) : ?> class="bg-red-900 text-white block px-3 py-2 rounded-md text-base font-medium" 
+        <?php else : ?> class="text-white hover:bg-red-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+        <?php endif; ?>
+        >Treatment Rooms</a>
 
-        <a href="/contact" class="text-white hover:bg-red-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact & Location</a>
+        <a href="/contact" 
+        <?php if( is_page( 121 )) : ?> class="bg-red-900 text-white block px-3 py-2 rounded-md text-base font-medium" 
+        <?php else : ?> class="text-white hover:bg-red-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+        <?php endif; ?>
+        >Contact & Location</a>
       </div>
     </div>
   </nav>

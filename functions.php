@@ -1,5 +1,7 @@
 <?php
 
+  add_theme_support( 'title-tag' );
+
   // Add theme support for featured images, and add a few custom image sizes
   add_image_size( 'gallery_thumb', 395 );
 

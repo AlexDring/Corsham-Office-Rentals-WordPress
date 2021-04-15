@@ -10,6 +10,7 @@ get_header(); ?>
     <div class="flex flex-wrap bg-white px-12 mx-auto">
       <div class="w-full md:w-1/2 bg-gray-100 p-12 rounded-l-lg">
         <h1 class="text-3xl mb-6 font-extrabold">Get in touch</h1>
+
         <?php if( get_field('phone') ): ?>
           <h2 class="font-semibold text-gray-900 text-xs">PHONE</h2>
           <a class="text-red-500 font-semibold text-xl" href="tel:<?php the_field('phone'); ?>"><?php the_field('phone'); ?></a>
@@ -27,7 +28,7 @@ get_header(); ?>
        
       </div>
       <div class="w-full md:w-1/2 p-12 rounded-r-lg bg-gray-50">
-        <form action="">
+        <!-- <form action="">
           <div class="flex flex-col">
             <label for="name" class="hidden">Full Name</label>
             <input type="name" name="name" id="name" placeholder="Full Name" class="w-100 mt-3 py-3 px-3 rounded-md bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-800 text-sm focus:border-red-700 focus:outline-none">
@@ -51,7 +52,8 @@ get_header(); ?>
           <button type="submit" class="md:w-32 bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-6 rounded-md mt-4 transition ease-in-out duration-300">
               Submit
           </button>
-        </form>
+        </form> -->
+        <?php echo do_shortcode( '[contact-form-7 id="226" title="Contact"]' ) ?>
       </div>
     </div>
   </div>

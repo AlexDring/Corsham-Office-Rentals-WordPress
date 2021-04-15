@@ -5,9 +5,6 @@
 
 get_header(); ?>
 
-<?php 
-get_header(); ?>
-
 <div class="relative bg-white overflow-hidden">
   <div class="max-w-7xl mx-auto">
     <div class="h-560 relative z-10 bg-white lg:max-w-2xl lg:w-full">
@@ -170,11 +167,6 @@ get_header(); ?>
           Contact us
         </a>
       </div>
-      <!-- <div class="ml-3 inline-flex rounded-md shadow">
-        <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-red-600 bg-white hover:bg-indigo-50">
-          Learn more
-        </a>
-      </div> -->
     </div>
   </div>
 </div>
